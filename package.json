@@ -1,12 +1,17 @@
 {
-  "name": "marketing",
-  "version": "0.0.0",
+  "name": "trading-journal",
+  "version": "1.0.0",
   "private": true,
   "type": "module",
+  "homepage": "https://mandavavasanth.github.io/trading-journal/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mandavavasanth/trading-journal.git"
+  },
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --host",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview --host"
   },
   "devDependencies": {
     "autoprefixer": "^10.5.4",
