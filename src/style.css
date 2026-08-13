@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-dark-bg text-gray-200 antialiased font-sans m-0 p-0 min-h-screen flex flex-col;
+    background: radial-gradient(circle at top right, #1a1a24, #0f0f11);
+  }
+}
+
+@layer components {
+  .glass-panel {
+    @apply bg-dark-panel/80 backdrop-blur-md border border-gray-800 rounded-xl shadow-lg;
+  }
+  
+  .glass-panel-interactive {
+    @apply glass-panel transition-all duration-300 hover:border-gray-600 cursor-pointer;
+  }
+  
+  .btn-primary {
+    @apply px-4 py-2 bg-blue-600/20 text-neon-blue border border-neon-blue/50 hover:bg-blue-600/30 hover:shadow-neon-blue rounded-lg transition-all font-medium flex items-center justify-center gap-2;
+  }
+  
+  .btn-success {
+    @apply px-4 py-2 bg-neon-green/10 text-neon-green border border-neon-green/50 hover:bg-neon-green/20 hover:shadow-neon-green rounded-lg transition-all font-medium flex items-center justify-center gap-2;
+  }
+  
+  .btn-danger {
+    @apply px-4 py-2 bg-neon-red/10 text-neon-red border border-neon-red/50 hover:bg-neon-red/20 hover:shadow-neon-red rounded-lg transition-all font-medium flex items-center justify-center gap-2;
+  }
+  
+  .input-field {
+    @apply w-full bg-[#0a0a0c] border border-gray-700 rounded-lg px-3 py-2 text-white focus:outline-none focus:border-neon-blue focus:shadow-neon-blue transition-all;
+  }
+  
+  .form-label {
+    @apply block text-sm font-medium text-gray-400 mb-1;
+  }
+  
+  .text-neon-profit {
+    @apply text-neon-green drop-shadow-[0_0_5px_rgba(0,255,136,0.8)];
+  }
+  
+  .text-neon-loss {
+    @apply text-neon-red drop-shadow-[0_0_5px_rgba(255,51,102,0.8)];
+  }
+}
+
+/* Scrollbar styles */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0f0f11;
+}
+::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
